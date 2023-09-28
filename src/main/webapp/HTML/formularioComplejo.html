@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario Complejo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+    </head>
+    <body>
+        <h2>FORMULARIO COMPLEJO</h2>
+        <form action="../FormularioComplejo" method="post">
+            <div class="apartado1">
+                <fieldset>
+                    <legend>Datos Personales</legend>              
+                    <br>
+                    <label>Usuario</label>
+                    <input class="usuario" type="text" name="usuario">
+                    <br>               
+                    <label>Password</label>
+                    <input class="password" type="text" name="password">
+                    <br>             
+                    <label>Edad :</label>
+                    <select name="edad">
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                    </select>
+                    <br>
+                </fieldset>
+            </div>
+            <div class = "apartado2">
+                <fieldset>
+                    <legend>Otros Datos</legend>
+                    <label>Estado Civil</label>
+                    <input type="radio" name="estado" value="soltero">Soltero/a
+                    <input type="radio" name="estado" value="casado">Casado/a
+                    <input type="radio" name="estado" value="viudo">Viudo/a
+                    <input type="radio" name="estado" value="divorciado">Divorciado/a  
+                    <br>
+                    <label>Aficciones (una o varias,CTRL)</label>
+                    <select name="Aficiones" multiple>
+                        <option value="informatica">Inform&aacute;tica</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="musica">M&uacute;sica</option>
+                        <option value="viajar">Viajar</option>
+                    </select>
+                    <br>
+                    <label>Comentarios</label>
+                    <textarea id="txtarea" name="comentarios" rows="3" cols="50"></textarea>
+                    <br>
+                </fieldset> 
+            </div>
+            <div class="apartado3">
+                <fieldset>
+                    <legend>Medios Tecnol&oacute;gicos</legend>
+                    <label>Dispones de internet</label>
+                    <input type="radio" name="internet" value="si">S&iacute;
+                    <input type="radio" name="internet" value="no">No
+                    <br><br>
+                    <label>Sistema operativo (elige uno)</label>
+                    <select name="S.O">
+                        <option value="macintosh">Macintosh</option>
+                        <option value="linux">Linux</option>
+                        <option value="windows">Windows</option>
+                        <option value="debian">Debian</option>
+                    </select>
+                    <br>
+                    <input type="hidden" name="digito" value="7">
+                </fieldset>
+            </div>
+            <br>
+            <input type="submit" name="btnEnviar" value="Enviar">
+            <input type="reset" name="Limpiar" value="Limpiar">
+        </form>
+    </body>
+</html>

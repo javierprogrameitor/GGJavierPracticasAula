@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario Simple</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>Entrada de datos</h1>
+            <form action="../Formulario" method="post">
+                <label for="nb">Nombre: </label>
+                <input type="text" name="nombre" id="nb"><br>
+                <label for="ap">Apellidos: </label>
+                <input type="text" name="apellidos" id="ap">
+                <br>
+                <label>Gustos</label>
+                <br>
+                <input type="radio" name="gustos" value="Musica">M&uacute;sica
+                <input type="radio" name="gustos" value="Viajes">Viajes
+                <input type="radio" name="gustos" value="Juegos">Juegos
+                <br>
+                <input type="submit" name="btnEnviar" value="Enviar">
+                <input type="reset" name="Limpiar" value="Limpiar">
+            </form> 
+        </div>
+    </body>
+</html>
