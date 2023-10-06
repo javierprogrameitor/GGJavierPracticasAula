@@ -1,0 +1,30 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 oct. 2023, 21:08:28
+    Author     : javier
+*/
+h2{
+    background-color:#333300;
+   color: gold;
+}
+
+.contenedor {
+    display: flex; /* Utilizamos flexbox para alinear los divs en la misma fila */
+}
+
+.div1, .div2 {
+    width: 50%; /* Establecemos un ancho del 50% para que ocupen la mitad del contenedor */
+    height: 800px; /* Puedes ajustar la altura según tus necesidades */
+    border: 1px solid #ccc; /* Añadimos un borde para visualizar los divs */
+    box-sizing: border-box; /* El borde se incluye en el ancho y alto total del div */
+}
+
+.div1{
+    background-color: #33ccff;
+}
+.div2{
+    background-color: #ff9900;
+}

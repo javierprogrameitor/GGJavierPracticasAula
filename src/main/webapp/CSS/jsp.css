@@ -1,0 +1,38 @@
+
+/*Estilo para toda la pantalla*/
+body {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color:#99ffff;
+    border-radius: 30px;
+    box-shadow: 0 30px 45px rgba(0, 0, 0, 0.2);
+
+}
+
+
+h1{
+    
+    color:#660000;
+    
+}
+
+
+#miBoton {
+    padding: 10px 20px; /* Ajusta el espacio interno del botón según sea necesario */
+    background-color: #3498db; /* Cambia el color de fondo */
+    color: #fff; /* Cambia el color del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+    font-size: 16px; /* Cambia el tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse por encima */
+}
+
+#miBoton1 {
+    padding: 10px 20px; /* Ajusta el espacio interno del botón según sea necesario */
+    background-color: #3498db; /* Cambia el color de fondo */
+    color: #fff; /* Cambia el color del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+    font-size: 16px; /* Cambia el tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse por encima */
+}
