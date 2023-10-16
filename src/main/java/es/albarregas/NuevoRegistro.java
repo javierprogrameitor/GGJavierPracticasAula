@@ -1,4 +1,4 @@
-package es.albarregas.controllers;
+package es.albarregas;
 
 import java.io.IOException;
 import java.io.PrintWriter;

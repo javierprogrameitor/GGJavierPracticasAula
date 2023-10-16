@@ -1,4 +1,4 @@
-package es.albarregas.controllers;
+package es.albarregas;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author javier
  */
-@WebServlet(name = "Bienvenida", urlPatterns = {"/Bienvenida"})
-public class Bienvenida extends HttpServlet {
+@WebServlet(name = "Formulario", urlPatterns = {"/Formulario"})
+public class Formulario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,30 +40,7 @@ public class Bienvenida extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Bienvenida</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Bienvenida at " + request.getContextPath() + "</h1>");
-            out.println("<h2>El método de llamada es: " + request.getMethod() + "</h2>");
-            out.println("<p><a href=\".\">Men&uacute;</a></p>");
-
-            String nombre = null;
-            Enumeration<String> campos = request.getParameterNames();
-
-            while (campos.hasMoreElements()) {
-                nombre = campos.nextElement();
-
-                    out.println("El par&aacute;metro " + nombre + " es igual a " + request.getParameter(nombre) + " y ");   
-            }
-            out.println("</body>");
-            out.println("</html>");
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -76,7 +53,35 @@ public class Bienvenida extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {       
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Formulario</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet Formulario at " + request.getContextPath() + "</h1>");
+            out.println("<h2>El método de llamada es: " + request.getMethod() + "</h2>");
+
+            String nombre = null;
+            out.println("<ul>");
+            Enumeration<String> campos = request.getParameterNames();
+            boolean s = campos.hasMoreElements();
+
+            while (campos.hasMoreElements()) {
+                nombre = campos.nextElement();
+                if (!nombre.startsWith("btn")) {
+                    out.println("<li>El par&aacute;metro " + nombre + " es igual a " + request.getParameter(nombre) + "</li>");
+                }
+            }
+            out.println("<ul>");
+            out.println("<p><a href=\".\">Men&uacute;</a></p>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     /**
